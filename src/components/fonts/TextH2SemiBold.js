@@ -3,11 +3,11 @@ import { Text } from "react-native";
 import fontSize from "../../constants/fontSize";
 import colors from "../../constants/colors";
 
-const TextH2 = ({ children, color }) => {
+const TextH2SemiBold = ({ children, color }) => {
   return (
     <Text
       style={{
-        fontFamily: "mul-mid",
+        fontFamily: "mul-semibold",
         fontSize: fontSize.h2,
         color: color ? color : colors.black,
       }}
@@ -17,4 +17,4 @@ const TextH2 = ({ children, color }) => {
   );
 };
 
-export default TextH2;
+export default TextH2SemiBold;
