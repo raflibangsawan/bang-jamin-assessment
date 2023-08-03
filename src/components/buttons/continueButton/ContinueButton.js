@@ -3,12 +3,9 @@ import React from "react";
 import TextRegulerBold from "../../fonts/TextRegulerBold";
 import colors from "../../../constants/colors";
 
-const ContinueButton = ({ navigation }) => {
+const ContinueButton = ({ handleOnPress }) => {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => navigation.navigate("Welcome")}
-    >
+    <TouchableOpacity style={styles.container} onPress={handleOnPress}>
       <TextRegulerBold color={colors.white}>Continue</TextRegulerBold>
     </TouchableOpacity>
   );
