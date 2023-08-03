@@ -3,7 +3,7 @@ import { Text } from "react-native";
 import fontSize from "../../constants/fontSize";
 import colors from "../../constants/colors";
 
-const TextH3 = ({ text, color, weight }) => {
+const TextH3 = ({ children, color, weight }) => {
   return (
     <Text
       style={{
@@ -13,7 +13,7 @@ const TextH3 = ({ text, color, weight }) => {
         fontWeight: weight ? weight : "normal",
       }}
     >
-      {text}
+      {children}
     </Text>
   );
 };
