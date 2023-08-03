@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import colors from "../../constants/colors";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import ContinueButton from "../../components/buttons/continueButton/ContinueButton";
+import TextSmall from "../../components/fonts/TextSmall";
 
 const Login = ({ navigation }) => {
   const [text, onChangeText] = useState("");
@@ -25,6 +26,17 @@ const Login = ({ navigation }) => {
           placeholder="tony@bangjamin.com"
         />
         <ContinueButton navigation={navigation} />
+        <TextSmall size={10} color={"#545454"}>
+          By clicking continue, you agree to our{" "}
+          <TextSmall size={10} color={colors.primary}>
+            Terms of Use
+          </TextSmall>{" "}
+          and acknowledge that you have read our{" "}
+          <TextSmall size={10} color={colors.primary}>
+            Privacy Policy
+          </TextSmall>
+          .
+        </TextSmall>
       </View>
     </View>
   );
