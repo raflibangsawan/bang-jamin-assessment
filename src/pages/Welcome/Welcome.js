@@ -8,7 +8,9 @@ import styles from "./styles";
 const Welcome = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>{StatusBar.currentHeight}</Text>
+      <Text style={{ fontFamily: "mul-mid", fontSize: 36, color: "black" }}>
+        Enter Bang Jamin PIN
+      </Text>
     </View>
   );
 };
