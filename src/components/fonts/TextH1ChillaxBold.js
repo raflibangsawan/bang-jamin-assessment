@@ -3,14 +3,13 @@ import { Text } from "react-native";
 import fontSize from "../../constants/fontSize";
 import colors from "../../constants/colors";
 
-const TextH1Chillax = ({ children, color, weight }) => {
+const TextH1ChillaxBold = ({ children, color }) => {
   return (
     <Text
       style={{
-        fontFamily: "chi-mid",
+        fontFamily: "chi-bold",
         fontSize: fontSize.h1,
         color: color ? color : colors.black,
-        fontWeight: weight ? weight : "normal",
       }}
     >
       {children}
@@ -18,4 +17,4 @@ const TextH1Chillax = ({ children, color, weight }) => {
   );
 };
 
-export default TextH1Chillax;
+export default TextH1ChillaxBold;

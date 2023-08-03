@@ -12,7 +12,9 @@ SplashScreen.preventAutoHideAsync();
 const App = () => {
   const [isLoaded] = useFonts({
     "mul-mid": require("./assets/fonts/Mulish-Medium.ttf"),
+    "mul-bold": require("./assets/fonts/Mulish-Bold.ttf"),
     "chi-mid": require("./assets/fonts/Chillax-Medium.ttf"),
+    "chi-bold": require("./assets/fonts/Chillax-Bold.ttf"),
   });
 
   useEffect(() => {
