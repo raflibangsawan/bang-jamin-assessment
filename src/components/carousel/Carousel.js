@@ -16,8 +16,15 @@ const Carousel = () => {
   const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View style={{ flex: 3 }}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        maxHeight: "80%",
+      }}
+    >
+      <View style={{ flex: 1 }}>
         <FlatList
           data={slides}
           renderItem={({ item }) => <CarouselItem item={item} />}

@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
     fontSize: "100px",
     fontFamily: "mul-mid",
     alignItems: "center",
-    justifyContent: "center",
+    gap: 50,
+    justifyContent: "flex-start",
   },
 });
 

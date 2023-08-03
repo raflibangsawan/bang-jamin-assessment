@@ -11,6 +11,7 @@ const TextH1ChillaxBold = ({ children, color, textAlign }) => {
         fontSize: fontSize.h1,
         color: color ? color : colors.black,
         textAlign: textAlign ? textAlign : "left",
+        lineHeight: 30,
       }}
     >
       {children}
