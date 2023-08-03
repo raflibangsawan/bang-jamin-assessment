@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import TextRegulerBold from "../../fonts/TextRegulerBold";
 import colors from "../../../constants/colors";
 
-const LoginButton = () => {
+const LoginButton = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate("Login")}
+    >
       <TextRegulerBold color={colors.primary}>LOG IN</TextRegulerBold>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Welcome from "./src/pages/Welcome/Welcome";
+import Login from "./src/pages/Login/Login";
 
 const Stack = createStackNavigator();
 SplashScreen.preventAutoHideAsync();
@@ -37,6 +38,11 @@ const App = () => {
         <Stack.Screen
           name="Welcome"
           component={Welcome}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
