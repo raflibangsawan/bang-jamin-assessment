@@ -1,13 +1,12 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Welcome } from "./src/pages/Welcome/Welcome";
+import Welcome from "./src/pages/Welcome/Welcome";
 
-export default function App() {
-  const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -19,4 +18,6 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
+
+export default App;
