@@ -1,9 +1,11 @@
-import { StyleSheet, Image, View } from "react-native";
-import React from "react";
+import { StyleSheet, Image, View, TextInput } from "react-native";
+import React, { useState } from "react";
 import colors from "../../constants/colors";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
+import ContinueButton from "../../components/buttons/continueButton/ContinueButton";
 
-const Login = () => {
+const Login = ({ navigation }) => {
+  const [text, onChangeText] = useState("");
   return (
     <View style={styles.container}>
       <Image
@@ -16,6 +18,13 @@ const Login = () => {
           style={styles.logoImage}
         />
         <TextH2SemiBold>Login via Email</TextH2SemiBold>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeText}
+          value={text}
+          placeholder="tony@bangjamin.com"
+        />
+        <ContinueButton navigation={navigation} />
       </View>
     </View>
   );
@@ -35,12 +44,20 @@ const styles = StyleSheet.create({
   },
   form: {
     flex: 0.4,
+    gap: 10,
     width: "100%",
     justifyContent: "flex-start",
     padding: 20,
   },
   logoImage: {
     resizeMode: "contain",
-    width: 130,
+    width: 120,
+  },
+  input: {
+    borderColor: "#E3E3E3",
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 8,
+    paddingHorizontal: 16,
   },
 });
