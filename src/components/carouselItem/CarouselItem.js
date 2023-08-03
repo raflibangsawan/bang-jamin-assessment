@@ -26,7 +26,7 @@ const CarouselItem = ({ item }) => {
           {item.title}
         </TextH1ChillaxBold>
 
-        <TextReguler color={"white"} textAlign={"center"} opacity={0.5}>
+        <TextReguler color={"white"} textAlign={"center"} opacity={0.7}>
           {item.description}
         </TextReguler>
       </View>

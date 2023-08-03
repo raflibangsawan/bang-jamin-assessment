@@ -10,7 +10,7 @@ const Welcome = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Carousel />
-      <LoginButton />
+      <LoginButton navigation={navigation} />
     </View>
   );
 };
