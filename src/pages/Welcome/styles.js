@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     fontFamily: "mul-mid",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: StatusBar.currentHeight,
   },
 });
 

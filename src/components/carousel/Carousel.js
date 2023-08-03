@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { FlatList, View, Animated } from "react-native";
 
 import CarouselItem from "../carouselItem/CarouselItem";
+import Paginator from "../paginator/Paginator";
 import slides from "./slides";
 
 const Carousel = () => {
@@ -21,7 +22,7 @@ const Carousel = () => {
           data={slides}
           renderItem={({ item }) => <CarouselItem item={item} />}
           horizontal
-          showsHorizontalScrollIndicator
+          showsHorizontalScrollIndicator={false}
           pagingEnabled
           bounces={false}
           keyExtractor={(item) => item.id}
@@ -35,6 +36,8 @@ const Carousel = () => {
           ref={slidesRef}
         />
       </View>
+
+      <Paginator data={slides} scrollX={scrollX} />
     </View>
   );
 };

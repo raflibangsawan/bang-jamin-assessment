@@ -16,16 +16,17 @@ const CarouselItem = ({ item }) => {
       <Image
         source={item.image}
         style={[
-          { flex: 0.7, justifyContent: "center" },
+          { flex: 0.6, justifyContent: "center" },
           { width, resizeMode: "contain" },
         ]}
       />
 
-      <View style={{ flex: 0.3, justifyContent: "center" }}>
+      <View style={{ flex: 0.3, justifyContent: "center", gap: 10 }}>
         <TextH1ChillaxBold color={"white"} textAlign={"center"}>
           {item.title}
         </TextH1ChillaxBold>
-        <TextReguler color={"white"} textAlign={"center"}>
+
+        <TextReguler color={"white"} textAlign={"center"} opacity={0.5}>
           {item.description}
         </TextReguler>
       </View>
