@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { SafeAreaView, View, ScrollView } from "react-navigation";
-import { Text } from "react-native";
+import { SafeAreaView } from "react-navigation";
+import { Text, View, ScrollView } from "react-native";
+import { StatusBar } from "react-native";
 
-import { styles } from "./styles";
+import styles from "./styles";
 
 const Welcome = ({ navigation }) => {
   return (
-    <View>
-      <Text>Welcome</Text>
+    <View style={styles.container}>
+      <Text>{StatusBar.currentHeight}</Text>
     </View>
   );
 };
