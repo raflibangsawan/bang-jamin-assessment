@@ -7,6 +7,9 @@ import TextSmall from "../../components/fonts/TextSmall";
 
 const Login = ({ navigation }) => {
   const [text, onChangeText] = useState("");
+  const handleOnPress = () => {
+    if (text != "") navigation.navigate("Pin", { text });
+  };
   return (
     <View style={styles.container}>
       <Image
@@ -25,7 +28,7 @@ const Login = ({ navigation }) => {
           value={text}
           placeholder="tony@bangjamin.com"
         />
-        <ContinueButton navigation={navigation} />
+        <ContinueButton navigation={navigation} handleOnPress={handleOnPress} />
         <TextSmall size={10} color={"#545454"}>
           By clicking continue, you agree to our{" "}
           <TextSmall size={10} color={colors.primary}>
