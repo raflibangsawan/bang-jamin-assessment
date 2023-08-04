@@ -15,7 +15,7 @@ const InviteCard = () => {
         <TextRegulerBold color={colors.black}>
           Yuk Undang Sahabat!
         </TextRegulerBold>
-        <TextRegulerSemiBold color={"#878787"} opacity={0.8}>
+        <TextRegulerSemiBold color={colors.gray} opacity={0.8}>
           Cari cuan bareng sahabat kamu
         </TextRegulerSemiBold>
       </View>

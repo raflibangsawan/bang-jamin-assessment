@@ -11,5 +11,3 @@ const RuangKerja = () => {
 };
 
 export default RuangKerja;
-
-const styles = StyleSheet.create({});
