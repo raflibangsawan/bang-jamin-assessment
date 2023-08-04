@@ -13,7 +13,7 @@ const Login = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const showToast = () => {
-    ToastAndroid.show("A pikachu appeared nearby !", ToastAndroid.SHORT);
+    ToastAndroid.show(`User ${text} tidak ditemukan.`, ToastAndroid.SHORT);
   };
 
   const handleOnPress = async () => {
