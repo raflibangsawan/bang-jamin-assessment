@@ -1,8 +1,6 @@
 const checkEmailExists = (email, data) => {
-  console.log();
-  console.log("EMAIL: ", email);
-  console.log("DATA: ", data);
-  console.log();
+  const emailExists = data.some((obj) => obj.email === email);
+  return emailExists;
 };
 
 export default checkEmailExists;

@@ -1,12 +1,15 @@
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity, ActivityIndicator } from "react-native";
 import React from "react";
 import TextRegulerBold from "../../fonts/TextRegulerBold";
 import colors from "../../../constants/colors";
 
-const ContinueButton = ({ handleOnPress }) => {
+const ContinueButton = ({ handleOnPress, isLoading }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={handleOnPress}>
-      <TextRegulerBold color={colors.white}>Continue</TextRegulerBold>
+      {isLoading && <ActivityIndicator size="small" color={colors.white} />}
+      {!isLoading && (
+        <TextRegulerBold color={colors.white}>Continue</TextRegulerBold>
+      )}
     </TouchableOpacity>
   );
 };

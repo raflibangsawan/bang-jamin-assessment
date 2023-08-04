@@ -45,7 +45,11 @@ const Login = ({ navigation }) => {
           value={text}
           placeholder="tony@bangjamin.com"
         />
-        <ContinueButton navigation={navigation} handleOnPress={handleOnPress} />
+        <ContinueButton
+          navigation={navigation}
+          handleOnPress={handleOnPress}
+          isLoading={isLoading}
+        />
         <TextSmall size={10} color={"#545454"}>
           By clicking continue, you agree to our{" "}
           <TextSmall size={10} color={colors.primary}>
