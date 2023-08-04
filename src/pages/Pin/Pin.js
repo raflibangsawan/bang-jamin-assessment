@@ -3,6 +3,7 @@ import React from "react";
 import colors from "../../constants/colors";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import TextReguler from "../../components/fonts/TextReguler";
+import PinInput from "../../components/pinInput/PinInput";
 
 const Pin = ({ navigation, route }) => {
   return (
@@ -13,6 +14,7 @@ const Pin = ({ navigation, route }) => {
       />
       <TextH2SemiBold>Enter Bang Jamin PIN</TextH2SemiBold>
       <TextReguler color={colors.darkGray}>{route.params.text}</TextReguler>
+      <PinInput />
     </View>
   );
 };
