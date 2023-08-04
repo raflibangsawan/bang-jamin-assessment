@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import React, { useState } from "react";
+import axios from "axios";
 import colors from "../../constants/colors";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import TextReguler from "../../components/fonts/TextReguler";
@@ -24,7 +25,7 @@ const Pin = ({ navigation, route }) => {
         source={require("../../../assets/images/logo-bg-white-fit.png")}
         style={styles.logoImage}
       />
-      <TextH2SemiBold>Enter Bang Jamin PIN</TextH2SemiBold>
+      <TextH2SemiBold color={colors.black}>Enter Bang Jamin PIN</TextH2SemiBold>
       <TextReguler color={colors.darkGray}>{route.params.text}</TextReguler>
       <SmoothPinCodeInput
         cellSize={48}

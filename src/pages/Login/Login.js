@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
           source={require("../../../assets/images/logo-bg-white-fit.png")}
           style={styles.logoImage}
         />
-        <TextH2SemiBold>Login via Email</TextH2SemiBold>
+        <TextH2SemiBold color={colors.black}>Login via Email</TextH2SemiBold>
         <TextInput
           style={styles.input}
           onChangeText={onChangeText}
