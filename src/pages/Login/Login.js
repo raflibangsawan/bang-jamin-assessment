@@ -1,15 +1,32 @@
 import { StyleSheet, Image, View, TextInput } from "react-native";
 import React, { useState } from "react";
+import axios from "axios";
+import API_URL from "../../constants/apiUrl";
 import colors from "../../constants/colors";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import ContinueButton from "../../components/buttons/continueButton/ContinueButton";
 import TextSmall from "../../components/fonts/TextSmall";
+import checkEmailExists from "../../helpers/checkEmailExists.helper";
 
 const Login = ({ navigation }) => {
   const [text, onChangeText] = useState("");
-  const handleOnPress = () => {
-    if (text != "") navigation.navigate("Pin", { text });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleOnPress = async () => {
+    setIsLoading(true);
+    await axios
+      .get(API_URL.users)
+      .then((response) => {
+        checkEmailExists(text, response.data.data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        console.log(error);
+      });
+    // if (text != "") navigation.navigate("Pin", { text });
   };
+
   return (
     <View style={styles.container}>
       <Image
