@@ -17,7 +17,12 @@ export default function PinInput() {
   const digit5Ref = useRef(null);
   const digit6Ref = useRef(null);
 
-  const handleBackspace = {};
+  const handleBackspace = (event, index) => {
+    const { nativeEvent } = event;
+
+    if (nativeEvent.key === "Backspace") {
+    }
+  };
   return (
     <View style={styles.container}>
       <View style={styles.numberInput}>
@@ -25,12 +30,15 @@ export default function PinInput() {
           ref={digit1Ref}
           keyboardType="number-pad"
           maxLength={1}
-          onChange={(digit1) => {
-            setDigit1(digit1);
+          onChange={(event) => {
+            setDigit1(event.target.toFixed);
             if (digit1 !== "") {
+              console.log("==================");
+              console.log(event);
+              // digit2Ref.current.focus();
+            }
+            if (digit1 === null) {
               digit2Ref.current.focus();
-            } else {
-              digit1Ref.current.focus();
             }
           }}
           style={styles.textInput}
