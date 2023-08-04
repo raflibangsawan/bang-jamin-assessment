@@ -1,10 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, Pressable } from "react-native";
 import React from "react";
-import colors from "../../../constants/colors";
 
-const IconButton = ({ label, children }) => {
+const IconButton = ({ label, children, onPress }) => {
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={onPress}>
       {children}
       <Text
         style={{
@@ -16,12 +15,12 @@ const IconButton = ({ label, children }) => {
       >
         {label}
       </Text>
-    </View>
+    </Pressable>
   );
 };
 
 export default IconButton;
 
 const styles = StyleSheet.create({
-  container: { justifyContent: "center", alignItems: "center" },
+  container: { justifyContent: "center", alignItems: "center", gap: 8 },
 });
