@@ -18,7 +18,7 @@ const Pin = ({ navigation, route }) => {
       await axios
         .post(API_URL.login, { email: userEmail, password: pin })
         .then((response) => {
-          console.log(response.data);
+          navigation.navigate("Home");
           setIsLoading(false);
         });
     }

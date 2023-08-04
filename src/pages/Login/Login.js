@@ -29,8 +29,6 @@ const Login = ({ navigation }) => {
         }
       });
     }
-
-    // if (text != "") ;
   };
 
   return (
