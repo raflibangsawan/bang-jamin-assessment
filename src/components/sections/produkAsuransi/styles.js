@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     height: 65,
   },
   buttonContainer: { flexDirection: "row", justifyContent: "space-around" },
-  textContainer: {},
+  textContainer: { gap: 8 },
 });
 
 export default styles;
