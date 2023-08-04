@@ -1,4 +1,4 @@
-import { StyleSheet, Image, View, TextInput } from "react-native";
+import { StyleSheet, Image, View, TextInput, ToastAndroid } from "react-native";
 import React, { useState } from "react";
 import axios from "axios";
 import API_URL from "../../constants/apiUrl";
@@ -12,19 +12,25 @@ const Login = ({ navigation }) => {
   const [text, onChangeText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const showToast = () => {
+    ToastAndroid.show("A pikachu appeared nearby !", ToastAndroid.SHORT);
+  };
+
   const handleOnPress = async () => {
-    setIsLoading(true);
-    await axios
-      .get(API_URL.users)
-      .then((response) => {
-        checkEmailExists(text, response.data.data);
+    if (text != "") {
+      setIsLoading(true);
+      await axios.get(API_URL.users).then((response) => {
+        const emailExists = checkEmailExists(text, response.data.data);
         setIsLoading(false);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        console.log(error);
+        if (emailExists) {
+          navigation.navigate("Pin", { text });
+        } else {
+          showToast();
+        }
       });
-    // if (text != "") navigation.navigate("Pin", { text });
+    }
+
+    // if (text != "") ;
   };
 
   return (
