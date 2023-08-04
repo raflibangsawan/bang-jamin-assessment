@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import colors from "../../constants/colors";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import TextReguler from "../../components/fonts/TextReguler";
-import PinInput from "../../components/pinInput/PinInput";
+import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 
 const Pin = ({ navigation, route }) => {
+  const [pin, setPin] = useState();
   return (
     <View style={styles.container}>
       <Image
@@ -14,7 +15,22 @@ const Pin = ({ navigation, route }) => {
       />
       <TextH2SemiBold>Enter Bang Jamin PIN</TextH2SemiBold>
       <TextReguler color={colors.darkGray}>{route.params.text}</TextReguler>
-      <PinInput />
+      <SmoothPinCodeInput
+        cellSize={48}
+        animated={false}
+        cellSpacing={10}
+        cellStyle={{
+          borderWidth: 1,
+          borderRadius: 10,
+          borderColor: colors.gray,
+        }}
+        cellStyleFocused={{
+          borderColor: colors.primary,
+        }}
+        codeLength={6}
+        value={pin}
+        onTextChange={setPin}
+      />
     </View>
   );
 };
