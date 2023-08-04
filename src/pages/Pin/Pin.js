@@ -7,7 +7,9 @@ import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 import ContinueButton from "../../components/buttons/continueButton/ContinueButton";
 
 const Pin = ({ navigation, route }) => {
-  const [pin, setPin] = useState();
+  const [pin, setPin] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleOnPress = () => {
     if (pin.length === 6) {
       console.log("fulfilled");
@@ -15,6 +17,7 @@ const Pin = ({ navigation, route }) => {
       console.log("not fulfilled");
     }
   };
+
   return (
     <View style={styles.container}>
       <Image
