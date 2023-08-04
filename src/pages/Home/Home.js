@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import colors from "../../constants/colors";
 import InfoCard from "../../components/infoCard/InfoCard";
+import InviteCard from "../../components/inviteCard/InviteCard";
 
 const Home = () => {
   return (
@@ -47,6 +48,7 @@ const Home = () => {
       </View>
       <View style={styles.body}>
         <InfoCard />
+        <InviteCard />
       </View>
     </View>
   );
@@ -71,6 +73,7 @@ const styles = StyleSheet.create({
   },
   body: {
     paddingHorizontal: 16,
+    gap: 22,
   },
   image: {
     flex: 1,
