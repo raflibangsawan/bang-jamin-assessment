@@ -37,15 +37,15 @@ const ProdukAsuransi = () => {
             style={styles.infoImageIcon}
           />
         </IconButton>
-        <IconButton label={"Mobil"}>
+        <IconButton label={"Motor"}>
           <Image
-            source={require("../../../../assets/icons/car.png")}
+            source={require("../../../../assets/icons/bike.png")}
             style={styles.infoImageIcon}
           />
         </IconButton>
-        <IconButton label={"Mobil"}>
+        <IconButton label={"Truk"}>
           <Image
-            source={require("../../../../assets/icons/car.png")}
+            source={require("../../../../assets/icons/truck.png")}
             style={styles.infoImageIcon}
           />
         </IconButton>
