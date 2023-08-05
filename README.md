@@ -1,6 +1,6 @@
 # Bang Jamin - React Native Assessment Test
 
-Bang Jamin is a React Native project created for the assessment test of frontend engineer position.
+Bang Jamin is a React Native project created for the assessment test of frontend engineer position at Bang Jamin.
 
 ## Project Setup
 
