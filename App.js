@@ -66,7 +66,15 @@ const App = () => {
           component={Home}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Nasabah" component={Nasabah} />
+        <Stack.Screen
+          name="Nasabah"
+          component={Nasabah}
+          options={{
+            headerTitleStyle: {
+              fontFamily: "mul-bold",
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
