@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+import CustomHeader from "./src/components/customHeader/CustomHeader";
 import Welcome from "./src/pages/Welcome/Welcome";
 import Login from "./src/pages/Login/Login";
 import Pin from "./src/pages/Pin/Pin";
@@ -38,7 +39,11 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          header: (props) => <CustomHeader title={props.children} />,
+        }}
+      >
         <Stack.Screen
           name="Welcome"
           component={Welcome}
