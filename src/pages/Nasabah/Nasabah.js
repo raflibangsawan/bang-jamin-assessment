@@ -1,12 +1,13 @@
-import { Text, View } from "react-native";
+import { ScrollView, ActivityIndicator } from "react-native";
 import React from "react";
 import styles from "./styles";
+import colors from "../../constants/colors";
 
 const Nasabah = () => {
   return (
-    <View>
-      <Text>Nasabah</Text>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <ActivityIndicator size="large" color={colors.primary} />
+    </ScrollView>
   );
 };
 
