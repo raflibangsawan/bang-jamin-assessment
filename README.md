@@ -2,6 +2,12 @@
 
 Bang Jamin is a React Native project created for the assessment test of frontend engineer position at Bang Jamin.
 
+## Important Notes!
+
+The application that has been built APK has a bug that makes the application stuck on the splash screen. Please open the application with the simulator using the `npm start` or `npm run android` command.
+
+The API for login always responds OK with any PIN input as long as the email entered is correct so there's no PIN validation, only email checking.
+
 ## Device Information
 
 The Bang Jamin app was developed and tested on a 6" Pixel 5 Android device running Android 12. The app has been optimized for this specific device, providing a seamless user experience.
