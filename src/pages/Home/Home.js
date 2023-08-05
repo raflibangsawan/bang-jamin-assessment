@@ -7,7 +7,7 @@ import ProdukAsuransi from "../../components/sections/produkAsuransi/ProdukAsura
 import RuangKerja from "../../components/sections/ruangKerja/RuangKerja";
 import styles from "./styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -21,7 +21,7 @@ const Home = () => {
         <InfoCard />
         <InviteCard />
         <ProdukAsuransi />
-        <RuangKerja />
+        <RuangKerja navigation={navigation} />
       </View>
     </View>
   );

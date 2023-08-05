@@ -4,7 +4,11 @@ import styles from "./styles";
 import colors from "../../../constants/colors";
 import IconButton from "../../buttons/iconButton/IconButton";
 
-const RuangKerja = () => {
+const RuangKerja = ({ navigation }) => {
+  const handleOnPress = () => {
+    navigation.navigate("Nasabah");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -43,7 +47,7 @@ const RuangKerja = () => {
             style={styles.infoImageIcon}
           />
         </IconButton>
-        <IconButton label={"Nasabah"}>
+        <IconButton label={"Nasabah"} onPress={handleOnPress}>
           <Image
             source={require("../../../../assets/icons/nasabah.png")}
             style={styles.infoImageIcon}
