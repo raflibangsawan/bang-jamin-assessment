@@ -11,7 +11,7 @@ import Home from "./src/pages/Home/Home";
 import Nasabah from "./src/pages/Nasabah/Nasabah";
 
 const Stack = createStackNavigator();
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
 
 const App = () => {
   const [isLoaded] = useFonts({
@@ -22,19 +22,15 @@ const App = () => {
     "chi-bold": require("./assets/fonts/Chillax-Semibold.ttf"),
   });
 
-  useEffect(() => {
-    const hideSplash = async () => {
-      if (isLoaded) {
-        await SplashScreen.hideAsync();
-      }
-    };
+  // useEffect(() => {
+  //   const hideSplash = async () => {
+  //     if (isLoaded) {
+  //       await SplashScreen.hideAsync();
+  //     }
+  //   };
 
-    hideSplash();
-  }, [isLoaded]);
-
-  if (!isLoaded) {
-    return null;
-  }
+  //   hideSplash();
+  // }, [isLoaded]);
 
   return (
     <NavigationContainer>

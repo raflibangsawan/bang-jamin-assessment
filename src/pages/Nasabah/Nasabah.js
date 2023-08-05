@@ -13,7 +13,6 @@ const Nasabah = () => {
   const fetchUserData = async () => {
     const response = await axios.get(API_URL.users);
     setData(response.data.data);
-    console.log(response.data.data);
     setIsLoading(false);
   };
 
