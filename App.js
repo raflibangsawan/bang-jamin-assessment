@@ -8,6 +8,7 @@ import Welcome from "./src/pages/Welcome/Welcome";
 import Login from "./src/pages/Login/Login";
 import Pin from "./src/pages/Pin/Pin";
 import Home from "./src/pages/Home/Home";
+import Nasabah from "./src/pages/Nasabah/Nasabah";
 
 const Stack = createStackNavigator();
 SplashScreen.preventAutoHideAsync();
@@ -58,6 +59,7 @@ const App = () => {
           component={Home}
           options={{ headerShown: false }}
         />
+        <Stack.Screen name="Nasabah" component={Nasabah} />
       </Stack.Navigator>
     </NavigationContainer>
   );
