@@ -9,13 +9,10 @@ const UserCard = ({ name, email, image }) => {
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
-        <Image
-          source={{ uri: "https://reqres.in/img/faces/1-image.jpg" }}
-          style={styles.infoImageIcon}
-        />
+        <Image source={{ uri: image }} style={styles.infoImageIcon} />
         <View>
-          <TextRegulerSemiBold>Rafli Bangsawan</TextRegulerSemiBold>
-          <TextRegulerBold>raflibangsawans@ui.ac.id</TextRegulerBold>
+          <TextRegulerSemiBold>{name}</TextRegulerSemiBold>
+          <TextRegulerBold>{email}</TextRegulerBold>
         </View>
       </View>
 
