@@ -1,7 +1,8 @@
-import { StyleSheet, View, Image, ToastAndroid } from "react-native";
+import { View, Image, ToastAndroid } from "react-native";
 import React, { useState } from "react";
 import axios from "axios";
 import colors from "../../constants/colors";
+import styles from "./styles";
 import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import TextReguler from "../../components/fonts/TextReguler";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
@@ -55,18 +56,3 @@ const Pin = ({ navigation, route }) => {
 };
 
 export default Pin;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.white,
-    height: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 20,
-    paddingHorizontal: 20,
-  },
-  logoImage: {
-    resizeMode: "contain",
-    width: 120,
-  },
-});

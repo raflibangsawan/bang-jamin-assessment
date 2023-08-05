@@ -1,4 +1,4 @@
-import { StyleSheet, Image, View, TextInput, ToastAndroid } from "react-native";
+import { Image, View, TextInput, ToastAndroid } from "react-native";
 import React, { useState } from "react";
 import axios from "axios";
 import API_URL from "../../constants/apiUrl";
@@ -7,6 +7,7 @@ import TextH2SemiBold from "../../components/fonts/TextH2SemiBold";
 import ContinueButton from "../../components/buttons/continueButton/ContinueButton";
 import TextSmall from "../../components/fonts/TextSmall";
 import checkEmailExists from "../../helpers/checkEmailExists.helper";
+import styles from "./styles";
 
 const Login = ({ navigation }) => {
   const [text, onChangeText] = useState("");
@@ -71,33 +72,3 @@ const Login = ({ navigation }) => {
 };
 
 export default Login;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.white,
-    height: "100%",
-  },
-  image: {
-    flex: 0.6,
-    justifyContent: "center",
-    width: "100%",
-  },
-  form: {
-    flex: 0.4,
-    gap: 10,
-    width: "100%",
-    justifyContent: "flex-start",
-    padding: 20,
-  },
-  logoImage: {
-    resizeMode: "contain",
-    width: 120,
-  },
-  input: {
-    borderColor: "#E3E3E3",
-    borderWidth: 1,
-    borderRadius: 12,
-    padding: 8,
-    paddingHorizontal: 16,
-  },
-});
